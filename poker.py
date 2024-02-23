@@ -40,7 +40,7 @@ def avaliarMao(mao):
     for naipe in naipes:
         naipes_contagem[naipe] = naipes_contagem.get(naipe, 0) + 1
 
-    # Organiza os valores para verificar sequência
+    # Verifica sequência
     valores_ordenados = sorted(set(valores))
     is_sequencia = len(valores_ordenados) == 5 and valores_ordenados[-1] - valores_ordenados[0] == 4
     is_flush = max(naipes_contagem.values()) == 5
